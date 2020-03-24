@@ -12,7 +12,7 @@ Realizar los siguientes ejercicios:
   * ¿Cuál es el valor de la variable en el proceso hijo?
   > El valor de esta variable es igual X = 100
   * ¿Qué sucede con la variable cuando el proceso hijo y el padre cambian el valor de ```x```?
-  >Cuando el valor x cambia es indiferente, debido a que la función fork() crea una copia exacta del padre en el hijo en el momento que es llamado, y se despues se continúan como procesos totalmente independientes.
+  >Cuando el valor x cambia es indiferente para padre e hijo, debido a que la función fork() crea una copia exacta del padre en el hijo en el momento que es llamado, y se despues se continúan como procesos totalmente independientes.
 2. Escriba un programa que abra un archivo (con la llamada ```open()```) y entonces llame a ```fork()```. **Nota**: El siguiente [enlace](https://www.geeksforgeeks.org/input-output-system-calls-c-create-open-close-read-write/) puede ser de utilidad para entender la llamada ```open()```.
   * ¿Pueden el padre y el hijo acceder al file descriptor retornado por ```open()```? 
   * ¿Qué pasa si ellos empiezan a escribir el archivo de manera concurrente, es decir, a la misma vez?

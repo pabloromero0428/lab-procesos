@@ -27,7 +27,9 @@ Realizar los siguientes ejercicios:
 * ¿Qué pasa si usted usa la función ```wait``` en el hijo?
 >Si se usa la funcion wait en el hijo se retorna -1, y esto sucede porque el proceso hijo no tiene ningún proceso secundario.
 6. Haga un programa, como el del ejercicio anterior, con una breve modificación, la cual consiste en usar ```waitpid()``` en lugar de ```wait()```. ¿Cuándo podría ser ```waitpid()``` útil?
+> ```waitpid()``` Podría ser útil cuando se tienen varios procesos hijos corriendo y se desea esperar unicamente a un hijo en especial.
 7. Escriba un programa que cree un proceso hijo y entonces en el proceso hijo cierre la salida estandar (```STDOUT FILENO```). ¿Qué pasa si el hijo llama ```printf()``` para imprimir alguna salida después de cerrar el descriptor?
+> NO se muestra nada en la consola ya que se cerro la salida estandar para ese proceso.
 8. Escriba un programa que cree dos hijos y conecte la salida estándar de un hijo a la entrada estándar del otro usando la llamada a sistema ```pipe()```
 
 ## 3. Entregable ##

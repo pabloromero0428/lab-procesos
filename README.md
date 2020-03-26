@@ -21,6 +21,7 @@ Realizar los siguientes ejercicios:
 3. Escriba un programa usando ```fork()```. El proceso hijo imprimirá ```"Hello"```; el proceso padre imprimirá ```"goodbye"```. Usted deberá asegurar que el proceso hijo imprima en primer lugar; ¿usted podría hacer esto sin llamar ```wait()``` en el padre? 
 >Se podría asegurar que el proceso hijo imprima en primer lugar si al realizar un llamado al fork() se usa un sleep() en el  proceso padre, haciendo que este imprima su mensaje algún tiempo después, sin la necesidad de llamar al wait().
 4. Escriba un programa que llame ```fork()``` y entonces llame alguna forma de ```exec()``` para correr el programa ```/bin/ls```. Intente probar todas las variaciones de la familia de funciones ```exec()``` incluyendo (en linux) ```execl()```, ```execle()```, ```execlp()```, ```execv()```, ```execvp()``` y ```execvpe()```. ¿Por qué piensa usted que existen tantas variaciones para la misma llamada básica?
+> Pensamos que existen gracias a que son una necesidad. La ejecucion de nuevos programas no siempre puede ser igual (La parametrizacion para la ejecucion del nuevo proceso puede cambiar), el S.O debe tener una interfaz limpia y esta es la forma como lo hace (exponiendo mas llamados al sistema).
 5. Escriba ahora un programa que use ```wait()``` para esperar que el proceso hijo finalice su ejecución. 
 * ¿Cuál es el valor de retorno de la función ```wait()```?.
 >El valor de retorno de la funcion wait() es pid del hijo.
